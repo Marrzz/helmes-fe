@@ -9,4 +9,6 @@ Currently, two official plugins are available:
 
 ## Starting the application
 
-to start the local application run `npm -i` to install the dependencies and then `npm run dev` in the src folder. The app will start on port 5173.
+To start the local application run `npm -i` to install the dependencies and then `npm run dev` in the src folder. The app will start on port 5173.
+
+** You will need to create .env file and configure the BE application base path. If you are using base configuration for BE application then set VITE_BE_APPLICATION_URL to http://localhost:8080/api **
