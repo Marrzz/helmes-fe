@@ -1,22 +1,12 @@
-import {
-  useInitiateSessionMutation,
-  useTerminateSessionMutation,
-} from '../api/sessionApi'
+import { useInitiateSessionMutation } from '../api/sessionApi'
 
 export const useSession = () => {
   const [executeInit] = useInitiateSessionMutation()
-  const [executeTerminate] = useTerminateSessionMutation()
-
   const initiateSession = () => {
     executeInit({})
   }
 
-  const terminateSession = () => {
-    executeTerminate({})
-  }
-
   return {
     initiateSession,
-    terminateSession,
   }
 }

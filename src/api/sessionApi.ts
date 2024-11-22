@@ -8,15 +8,8 @@ const sessionApi = baseApi.injectEndpoints({
         url: `/session`,
       }),
     }),
-    terminateSession: build.mutation({
-      query: () => ({
-        method: 'DELETE',
-        url: `/session`,
-      }),
-    }),
   }),
   overrideExisting: false,
 })
 
-export const { useInitiateSessionMutation, useTerminateSessionMutation } =
-  sessionApi
+export const { useInitiateSessionMutation } = sessionApi
