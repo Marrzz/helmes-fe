@@ -11,13 +11,11 @@ export const useSavePersonSectors = () => {
 
   const run = (formValues: PersonSectorsFields) => {
     const request = mapToSaveRequest(formValues)
-    execute(request)
-      .unwrap()
-      .then(() => {
-        if (isSuccess) {
-          dispatch(setFormValues(formValues))
-        }
-      })
+    execute(request).then(() => {
+      if (isSuccess) {
+        dispatch(setFormValues(formValues))
+      }
+    })
   }
 
   return {

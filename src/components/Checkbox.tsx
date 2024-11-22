@@ -26,7 +26,12 @@ export const Checkbox: ReactComponent<Props> = ({
         className='absolute inset-0 flex items-center justify-center pointer-events-none'
         aria-hidden='true'
       >
-        <CheckIcon className='hidden w-3 h-3 text-white group-data-[checked]:block' />
+        {value && (
+          <CheckIcon
+            className='hidden w-3 h-3 text-white group-data-[checked]:block'
+            data-testid='check-icon'
+          />
+        )}
       </div>
     </HeadlessCheckbox>
     <Label className='text-sm leading-6 font-medium'>{label}</Label>

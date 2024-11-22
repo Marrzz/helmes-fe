@@ -1,5 +1,18 @@
 {
   "files": [],
+  "compilerOptions": {
+    "module": "esnext", // or "commonjs" for Node.js
+    "jsx": "react", // or "react-jsx" if using React 17+
+    "strict": true, // Optional, enables strict mode
+    "esModuleInterop": true, // Optional, to enable import compatibility with ES modules
+    "skipLibCheck": true, // Optional, to skip type checking of declaration files,
+    "target": "es5", // or es6, depending on your environment
+    "types": [
+      "vite/client",
+      "vitest/globals",
+      "@testing-library/jest-dom",  // Add this line to include Vitest globals
+    ]
+  },
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

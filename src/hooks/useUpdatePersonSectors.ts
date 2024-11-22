@@ -8,7 +8,7 @@ export const useUpdatePersonSectors = () => {
 
   const run = (formValues: PersonSectorsFields) => {
     const request = mapToSaveRequest(formValues)
-    execute(request).unwrap()
+    execute(request)
   }
 
   return {
